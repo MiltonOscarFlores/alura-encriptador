@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <title>Encriptador de Texto</title>
+  </head>
+  <body>
+    <header>
+      <img
+        src="./logo.png"
+        alt="logo alura"
+        id="logo"
+      />
+    </header>
+    <img
+      id="image"
+      src="./persona.png"
+      alt="persona"
+    />
+    <main>
+      <!-- Primera sección: Input, párrafo y botones -->
+      <section class="input-section">
+        <input
+          type="text"
+          name="normalText"
+          id="normalText"
+          placeholder="Ingrese el texto aquí"
+        />
+
+        <div class="button-group">
+          <button
+            type="button"
+            id="encrypt"
+          >
+            Cifrar
+          </button>
+          <button
+            type="button"
+            id="decrypt"
+          >
+            Descifrar
+          </button>
+        </div>
+        <span>
+          <small>⚠️ Solo letras minúsculas y sin acentos</small>
+        </span>
+      </section>
+
+      <!-- Segunda sección: Imagen y output -->
+      <section class="output-section">
+        <textarea
+          id="outputText"
+          name="outputText"
+        ></textarea>
+        <button
+          type="button"
+          id="copyText"
+        >
+          Copiar texto
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <p>Challenge desarrollado por Milton Oscar Flores para AluraONE</p>
+      <p>G7 - 2024</p>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

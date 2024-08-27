@@ -1,0 +1,170 @@
+/* Estructura básica y reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: rgb(3, 156, 254);
+  background: linear-gradient(
+    0deg,
+    rgba(3, 156, 254, 1) 0%,
+    rgba(0, 19, 50, 1) 65%
+  );
+}
+
+/* Main y secciones */
+header {
+  background-color: #001332;
+  border-bottom: 1px solid white;
+}
+header img {
+  width: 8rem;
+  cursor: pointer; /* Añade cursor pointer al logo */
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 1rem; /* Espacio entre los elementos */
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo */
+  margin-bottom: 1rem; /* Espacio entre secciones */
+}
+
+.input-section input,
+.input-section span {
+  width: 100%; /* Asegura que los elementos ocupen el ancho completo */
+}
+
+.input-section .button-group {
+  display: flex;
+  justify-content: space-between; /* Coloca los botones uno al lado del otro */
+  width: 100%;
+  gap: 1rem; /* Añade espacio entre los botones */
+}
+
+.input-section button {
+  flex: 1; /* Asegura que ambos botones tengan el mismo ancho */
+  padding: 0.5rem 2rem;
+  cursor: pointer; /* Añade cursor pointer a los botones */
+}
+
+#normalText {
+  min-height: 8rem;
+  text-align: center;
+}
+
+.output-section {
+  width: 100%;
+  max-width: 600px; /* Ajusta el ancho máximo para pantallas más grandes */
+  margin-bottom: 1rem; /* Espacio entre secciones */
+  text-align: center; /* Centra el botón dentro de la sección */
+}
+
+#image {
+  display: none; /* Oculta la imagen en dispositivos móviles */
+}
+
+textarea {
+  width: 100%;
+  min-height: 8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.output-section button {
+  width: auto; /* Evita que el botón ocupe todo el ancho */
+  padding: 0.5rem 2rem;
+  margin: 0 auto; /* Centra el botón */
+  cursor: pointer; /* Añade cursor pointer al botón */
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1d1c1c;
+  color: white;
+}
+
+span {
+  color: wheat;
+  text-align: center;
+}
+
+/* Estilos para tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  main {
+    padding: 2rem;
+  }
+
+  .input-section,
+  .output-section {
+    max-width: 80%; /* Aumenta el ancho máximo en tablet */
+    margin-bottom: 2rem; /* Aumenta el espacio entre secciones */
+  }
+
+  #normalText,
+  textarea {
+    min-height: 10rem; /* Aumenta la altura de los inputs */
+  }
+
+  button {
+    padding: 0.75rem 3rem; /* Ajusta el tamaño de los botones */
+  }
+
+  #image {
+    display: block; /* Muestra la imagen nuevamente en tablet */
+    max-width: 15%;
+    margin: 0 auto 1rem; /* Centra la imagen y añade margen inferior */
+  }
+}
+
+/* Estilos para desktop */
+@media (min-width: 1025px) {
+  main {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start; /* Alinea los elementos al inicio en desktop */
+    padding: 2rem;
+  }
+
+  .input-section,
+  .output-section {
+    width: 45%; /* Ajusta el ancho de las secciones */
+    max-width: none; /* Elimina el ancho máximo para desktop */
+  }
+
+  #normalText,
+  textarea {
+    min-height: 12rem; /* Aumenta la altura de los inputs */
+  }
+
+  button {
+    padding: 1rem 4rem; /* Aumenta el tamaño de los botones */
+  }
+
+  #image {
+    display: block; /* Asegura que la imagen también se muestre en desktop */
+    max-width: 15%;
+    margin: 0 auto 1rem; /* Centra la imagen en desktop */
+  }
+}
